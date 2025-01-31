@@ -1,7 +1,7 @@
 [app]
 
 # (str) Title of your application
-title = SampleApp
+title = tic tac toc
 
 # (str) Package name
 package.name = nfsApk
