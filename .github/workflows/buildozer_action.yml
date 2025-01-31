@@ -43,3 +43,13 @@ jobs:
         with:
           name: TicTacToc-APK
           path: bin/*.apk
+runs-on: ubuntu-22.04
+- name: 🐍 Set Up Python
+  uses: actions/setup-python@v4
+  with:
+    python-version: "3.10"
+    cache: "pip"  # Speeds up installs
+with:
+  python-version: "3.9"
+- name: 🔧 Build APK with Debug Logs
+  run: buildozer -v android debug || (cat buildozer.spec && exit 1)
